@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import State from './hooks/state'
+// import Effect from './hooks/effect'
+// import Effect from './hooks/effect-1'
+import Ref from './hooks/ref'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/*<State />*/}
+      {/*<Effect />*/}
+      <Ref />
     </div>
   );
 }
