@@ -22,7 +22,8 @@ function Ref() {
 
 function Input(props) {
     const {text, setText, setEdit} = props;
-    let input = useRef(null)
+    let input = useRef(null);
+
     function toScroll() {
         let y = window.scrollY;
         input.style.transform = `translateY(${y}px)`;
@@ -35,7 +36,7 @@ function Input(props) {
         return () => {
             window.removeEventListener('scroll', toScroll);
         };
-    },[]); // 如果加 [] 是因为只在组件第一次渲染的时候添加监听
+    }, []); // 如果加 [] 是因为只在组件第一次渲染的时候添加监听
     return (
         <div>
             <input id="txt"
@@ -65,4 +66,22 @@ function Txt(props) {
     );
 }
 
-export default Ref;
+function Ref2() {
+    const [number, setNumber] = useState(0);
+    const prev = useRef(number);
+    useEffect(() => {
+        prev.current = number;
+    })
+    return (
+        <div>
+            <h1>当前值:{number}</h1>
+            <h1>上一次的值:{prev.current}</h1>
+            <button onClick={() => {
+                setNumber(number + 1);
+            }}>增加
+            </button>
+        </div>
+    );
+}
+
+export default Ref2;
