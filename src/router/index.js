@@ -5,14 +5,14 @@ function IndexRoute(props){
     return (
         <Switch>
             {routeList.map((item,index)=>{
-                return (<Route
-                        path={item.path}
-                        exact={item.exact}
-                        render={item.render}
-                        key = {index}
-                        {...props}
-                    />
-                )})}
+                return (<Route 
+                    path={item.path} 
+                    exact={item.exact} 
+                    render={item.render} 
+                    key = {index}
+                    {...props}
+                />
+            )})}
         </Switch>
     );
 }
