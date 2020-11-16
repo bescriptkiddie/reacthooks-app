@@ -4,7 +4,7 @@ import BScroll from "better-scroll";
 export default function Tab(props){
     let {data,render} = props;
     let bannerWrap = useRef(null);
-    let [now,setNow] = useState(0); 
+    let [now,setNow] = useState(0);
     let bScroll = null;
     useEffect(()=>{
         let timer = 0;
