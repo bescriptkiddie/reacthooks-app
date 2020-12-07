@@ -35,19 +35,19 @@ function RegisterBox(props){
             <h3>注册账号</h3>
             <div className="register_form">
                 <p>
-                    <input 
-                        type="text" 
-                        placeholder="用户名"  
-                        value = {user}    
+                    <input
+                        type="text"
+                        placeholder="用户名"
+                        value = {user}
                         onChange = {e=>{
                             setUser(e.target.value)
                         }}
                     />
                 </p>
                 <p>
-                    <input 
-                        type="password" 
-                        placeholder="请输入密码" 
+                    <input
+                        type="password"
+                        placeholder="请输入密码"
                         value={password}
                         onChange={e=>{
                             setPassword(e.target.value);
@@ -55,9 +55,9 @@ function RegisterBox(props){
                     />
                 </p>
                 <p>
-                    <input 
-                        type="password" 
-                        placeholder="请确认密码" 
+                    <input
+                        type="password"
+                        placeholder="请确认密码"
                         value={password2}
                         onChange={e=>{
                             setPassword2(e.target.value);
@@ -65,9 +65,9 @@ function RegisterBox(props){
                     />
                 </p>
                 <p className="clearfix">
-                    <input 
-                        type="text" 
-                        placeholder="验证码" 
+                    <input
+                        type="text"
+                        placeholder="验证码"
                         value={vcode}
                         onChange={e=>{
                             setVcode(e.target.value);
@@ -78,9 +78,9 @@ function RegisterBox(props){
                         className="verifyCode"
                     />
                     {vcodeShow?
-                        <img 
-                            className="verify" 
-                            src={vcodeSrc} 
+                        <img
+                            className="verify"
+                            src={vcodeSrc}
                             onTouchStart={(e)=>{
                                 let touch = e.changedTouches[0];
                                 point.x = touch.pageX;
@@ -94,15 +94,15 @@ function RegisterBox(props){
                                     };
                                     if(Math.abs(nowPoint.x - point.x)<5
                                     &&Math.abs(nowPoint.y - point.y)<5){
-                                        setVcodeSrc("/miaov/user/verify?"+Date.now()) 
+                                        setVcodeSrc("/miaov/user/verify?"+Date.now())
                                 }}}/>:""}
-                    
+
                 </p>
-                <button 
+                <button
                     className="form_btn"
-                    onClick = {toRegister}        
+                    onClick = {toRegister}
                 >马上注册</button>
-                <p className="form_tip">已有帐号？<a
+                <p className="form_tip">已有帐号？<a href=""
                     onClick={()=>{
                         setDeg(0)
                     }}

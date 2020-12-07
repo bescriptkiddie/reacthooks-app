@@ -11,7 +11,7 @@ export default function Course(){
             <p className="price">FREE</p>
             <div className="txt">
                 <p>以免费公开课的形式，解决你在学习中遇到的问题。</p>
-                <a href="https://www.baidu.com/" className="signUp">报名</a>
+                <a href="" href="https://www.baidu.com/" className="signUp">报名</a>
             </div>
         </li>
         <li className="month_li">
@@ -24,7 +24,7 @@ export default function Course(){
                     PC端静态页面，移动商静
                     态页面制作...
                 </p>
-                <a href="https://www.baidu.com/" className="signUp">报名</a>
+                <a href="" href="https://www.baidu.com/" className="signUp">报名</a>
             </div>
         </li>
         <li className="month_li">
@@ -37,7 +37,7 @@ export default function Course(){
                     作用域、闭包、原型链、核
                     心算法...
                 </p>
-                <a href="https://www.baidu.com/" className="signUp">报名</a>
+                <a href="" href="https://www.baidu.com/" className="signUp">报名</a>
             </div>
         </li>
         <li className="pop_li">
@@ -50,7 +50,7 @@ export default function Course(){
             <div className="txt">
                 <p>以免费公开课的形式，解决
                 你在学习中遇到的问题。</p>
-                <a href="https://www.baidu.com/" className="signUp">报名</a>
+                <a href="" href="https://www.baidu.com/" className="signUp">报名</a>
             </div>
         </li>
     </ul>

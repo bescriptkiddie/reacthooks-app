@@ -5,7 +5,8 @@ export default function lecturers(state={
         case "LOAD_LECTURERS":
             return {
                 data: action.data
-            };       
+            };
+        default:
     };
     return state
 }

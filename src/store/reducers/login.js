@@ -3,7 +3,8 @@ export default function getUser(state="",action){
         case "LOGIN":
             return action.user;
         case "LOGOUT":
-            return "";        
+            return "";
+        default:
     };
     return state
 }

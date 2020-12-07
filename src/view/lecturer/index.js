@@ -34,7 +34,7 @@ function Lecturer(props) {
   useEffect(()=>{
     dispatch(getLectirers());
   },[]);
-  
+
   return (
     <div>
       <Frame>
@@ -49,11 +49,11 @@ function Lecturer(props) {
         <Join />
         <Footer />
       </Frame>
-      {show?<LecturerAlert 
+      {show?<LecturerAlert
           data = {alertDate}
           hideAlert = {hideAlert}
       />:""}
-    </div>   
+    </div>
   );
 }
 

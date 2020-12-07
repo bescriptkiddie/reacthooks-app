@@ -12,7 +12,8 @@ export default function work(state={
             return {
                 loading: false,
                 data: action.data
-            };        
+            };
+        default:
     };
     return state
 }

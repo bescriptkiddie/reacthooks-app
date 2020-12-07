@@ -3,26 +3,26 @@ import BScroll from "better-scroll";
 export default function LecturerAlert(props){
     let {data,hideAlert} =  props;
     let wrap = useRef(null);
-    let point = {};  
+    let point = {};
     useEffect(()=>{
-        let bscroll = new BScroll(wrap.current,{
+        new BScroll(wrap.current,{
             scrollbar: true
         });
     },[]);
     return (
-     <aside 
+     <aside
         className="elastic"
         onTouchStart={()=>{
             hideAlert();
         }}
     >
-        <div 
+        <div
             className="elastic_box"
             onTouchStart={(e)=>{
                 e.stopPropagation();
             }}
         >
-            <span 
+            <span
                 className="close"
                 onTouchStart={(e)=>{
                     let touch = e.changedTouches[0];
@@ -47,11 +47,12 @@ export default function LecturerAlert(props){
             </div>
             <div className="elastic_txt">
                 <h3>{data.title}-妙味课堂 全职讲师</h3>
+                {/*利用better-scroll解决滚动条穿透*/}
                 <div className="elastic_content" ref={wrap}>
                     <div
                       dangerouslySetInnerHTML={{
                         __html: data.content
-                      }}  
+                      }}
                     ></div>
                 </div>
             </div>

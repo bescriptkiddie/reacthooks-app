@@ -23,7 +23,7 @@ export default function Works(props){
                     ))
                 }
             </ul>
-            <a className="more">{loadEnd?"没有新的数据了":(loading?"正在加载中":"上滑加载更多")}</a>
+            <a href=""  className="more">{loadEnd?"没有新的数据了":(loading?"正在加载中":"上滑加载更多")}</a>
         </div>
     );
 };

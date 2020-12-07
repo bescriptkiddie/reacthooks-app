@@ -2,7 +2,7 @@ export default function works(state={
     data: [],
     loading: false,
     loadEnd: false,
-    page: 1 
+    page: 1
 },action){
     switch(action.type){
         case "LOAD":
@@ -16,12 +16,13 @@ export default function works(state={
                 loading: false,
                 page: ++state.page,
                 data: state.data.concat(action.data)
-            };   
+            };
         case "LOADEND":
             return {
                 ...state,
                 loadEnd: true
-            }         
+            };
+        default:
     };
     return state
 }

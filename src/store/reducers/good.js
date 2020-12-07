@@ -12,7 +12,8 @@ export default function good(state={
             return {
                 good: false,
                 goodid: 0
-            };        
+            };
+        default:
     };
     return state
 }
