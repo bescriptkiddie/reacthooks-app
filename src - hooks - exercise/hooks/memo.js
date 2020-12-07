@@ -1,9 +1,11 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useMemo} from 'react';
 
-function Callback() {
+function Memo() {
     const [name, setName] = useState('pika');
     const [age, setAge] = useState(10);
-    let grow = useCallback(() => age < 18 ? '未成年' : '成年', [age < 18]);
+    let grow = useMemo(() => {
+        return age < 18 ? '未成年' : '成年';
+    }, [age < 18]);
     return <div>
         <h1>性名:{name}</h1>
         <h1>年龄:{age}</h1>
@@ -15,4 +17,4 @@ function Callback() {
     </div>;
 }
 
-export default Callback;
+export default Memo;
